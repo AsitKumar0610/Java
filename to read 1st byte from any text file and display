@@ -1,0 +1,12 @@
+import java.io.*;
+class c1
+{
+public static void main (String args[]) throws IOException{
+    FileInputStream fis = new FileInputStream("file.txt");
+    BufferedInputStream bis = new BufferedInputStream(fis);
+
+    int x = bis.read();
+    System.out.println((char)x);
+}
+}
+//Simple text file is also needed in the same directory with some text.
