@@ -1,0 +1,21 @@
+class First extends RuntimeException
+{
+    First(String s)
+    {
+        super(s);
+    }
+}
+class Xyz
+{
+    int balance = 1000 ;
+    void withdraw (int amount)
+    {
+        if(balance < amount)
+        throw new First ("Insufficient balance in account ");
+    }
+    static public void main (String []alpha)
+    {
+        Xyz d = new Xyz();
+        d.withdraw(3000) ;
+    }
+}
